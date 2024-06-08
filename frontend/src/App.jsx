@@ -4,7 +4,10 @@ import { useMutation } from "@tanstack/react-query";
 import "./App.css";
 //! function that must return a promise
 const makeRequestAPI = async (prompt) => {
-  const res = await axios.post("http://localhost:8080/generate", { prompt });
+  const res = await axios.post(
+    "https://gemini-ai-backend.vercel.app/generate",
+    { prompt }
+  );
   return res.data;
 };
 
